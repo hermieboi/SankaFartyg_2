@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f8f700bcfcb640641acc889f5c593c34
+timeCreated: 1442143785
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - SubmarinePrefab: {fileID: 193856, guid: 6bdd4cebe0e33404296d4f2ee2a1f6cb, type: 2}
+  - DestroyerPrefab: {fileID: 138230, guid: e362b21dcf13aeb47a1ba4093424f376, type: 2}
+  - CrusierPrefab: {fileID: 167456, guid: 2e57e672d54518540afffa5e949872d3, type: 2}
+  - BattleshipPrefab: {fileID: 139636, guid: 1a58ee64b39622149968dc77cdc83f59, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

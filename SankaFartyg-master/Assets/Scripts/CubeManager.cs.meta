@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: efe30226c138d6d4d92322fc18cd694a
+timeCreated: 1442905090
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - SubmarinePrefab: {instanceID: 0}
+  - DestroyerPrefab: {instanceID: 0}
+  - CrusierPrefab: {instanceID: 0}
+  - BattleshipPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
