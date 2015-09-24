@@ -37,16 +37,20 @@ public class CubeManager : MonoBehaviour
 	{
 		if(SM.currentShip == SpawnManager.ShipType.Sub && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY)
 		{
-			GameObject ShadowSub = GameObject.FindGameObjectWithTag("TransparentSub");
+//			GameObject ShadowSub = GameObject.FindGameObjectWithTag("TransparentSub");
+//			Debug.Log ("ShadowSub spawned!");
 
-		
-			if(ShadowSub != null)
-			{
-				ShadowSub.GetComponent<ChaseMouse>().Chasing = false;
-				ShadowSub.GetComponent<ChaseMouse>().Death = true;
-			}
+//		
+//			if(ShadowSub != null)
+//			{
+//				ShadowSub.GetComponent<ChaseMouse>().Chasing = false;
+//				ShadowSub.GetComponent<ChaseMouse>().Death = true;
+//				Debug.Log ("ShadowSub destroyed!");
+//			}
 
 			Instantiate(SubmarinePrefab,transform.position,Quaternion.identity);
+		
+			Debug.Log ("CubeManager i farten.");
 
 			if(SM.Sub_totalNumber < 1)
 			{
@@ -55,35 +59,35 @@ public class CubeManager : MonoBehaviour
 		}
 
 	
-		if (SM.currentShip == SpawnManager.ShipType.Destroyer && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY) 
+		else if (SM.currentShip == SpawnManager.ShipType.Destroyer && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY) 
 		{
-			GameObject ShadowDestroyer = GameObject.FindGameObjectWithTag ("TransparentDes");
-
-			if (ShadowDestroyer != null) 
-			{
-
-				ShadowDestroyer.GetComponent<ChaseMouse> ().Chasing = false;
-				ShadowDestroyer.GetComponent<ChaseMouse> ().Death = true;
-				Debug.Log ("ShadowDestroyer destroyed!");
-			}
+//			GameObject ShadowDestroyer = GameObject.FindGameObjectWithTag ("TransparentDes");
+//
+//			if (ShadowDestroyer != null) 
+//			{
+//
+//				ShadowDestroyer.GetComponent<ChaseMouse> ().Chasing = false;
+//				ShadowDestroyer.GetComponent<ChaseMouse> ().Death = true;
+//				Debug.Log ("ShadowDestroyer destroyed!");
+//			}
 		
 			Instantiate (DestroyerPrefab, transform.position, Quaternion.identity);
-		
+
 			if (SM.Destroyer_totalNumber < 1) 
 			{
 				SM.currentShip = SpawnManager.ShipType.None;
 			}
 		}
 
-		if (SM.currentShip == SpawnManager.ShipType.Crusier && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY) 
+	else if (SM.currentShip == SpawnManager.ShipType.Crusier && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY) 
 		{
-			GameObject ShadowCrusier = GameObject.FindGameObjectWithTag ("TransparentCrus");
-
-			if (ShadowCrusier != null) 
-			{
-				ShadowCrusier.GetComponent<ChaseMouse> ().Chasing = false;
-				ShadowCrusier.GetComponent<ChaseMouse> ().Death = true;
-			}
+//			GameObject ShadowCrusier = GameObject.FindGameObjectWithTag ("TransparentCrus");
+//
+//			if (ShadowCrusier != null) 
+//			{
+//				ShadowCrusier.GetComponent<ChaseMouse> ().Chasing = false;
+//				ShadowCrusier.GetComponent<ChaseMouse> ().Death = true;
+//			}
 
 			Instantiate (CrusierPrefab, transform.position, Quaternion.identity);
 			
@@ -94,15 +98,15 @@ public class CubeManager : MonoBehaviour
 		}
 
 
-		if(SM.currentShip == SpawnManager.ShipType.Battleship && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY)
+		else if(SM.currentShip == SpawnManager.ShipType.Battleship && gameObject.name == "PlayerCoords: X: " + XX + ", Y: " + YY)
 		{
-			GameObject ShadowBattleship = GameObject.FindGameObjectWithTag("TransparentBattle");
-
-			if(ShadowBattleship != null)
-			{
-				ShadowBattleship.GetComponent<ChaseMouse>().Chasing = false;
-				ShadowBattleship.GetComponent<ChaseMouse>().Death = true;
-			}
+//			GameObject ShadowBattleship = GameObject.FindGameObjectWithTag("TransparentBattle");
+//
+//			if(ShadowBattleship != null)
+//			{
+//				ShadowBattleship.GetComponent<ChaseMouse>().Chasing = false;
+//				ShadowBattleship.GetComponent<ChaseMouse>().Death = true;
+//			}
 
 			Instantiate(BattleshipPrefab,transform.position,Quaternion.identity);
 	

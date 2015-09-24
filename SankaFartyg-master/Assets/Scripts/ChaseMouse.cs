@@ -4,7 +4,7 @@ using System.Collections;
 public class ChaseMouse : MonoBehaviour 
 {
 	
-	private Vector3 mousePoz;
+	public Vector3 mousePoz;
 	private float x_Cords;
 	private float y_Cords;
 	public bool Chasing = true;
@@ -47,9 +47,15 @@ public class ChaseMouse : MonoBehaviour
 			mousePoz = Camera.main.ScreenToWorldPoint (mousePoz);
 			transform.position = mousePoz;
 		}
+
+		if (!Chasing)
+		{
+			print ("Not chasing anything!");
+		}
 		
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
+//			Destroy(gameObject);
 
 			if(SM.currentShip == SpawnManager.ShipType.Sub)
 			{
@@ -67,7 +73,7 @@ public class ChaseMouse : MonoBehaviour
 				Debug.Log ("Placement canceled. You have 1 more " + gameObject.name + " to spawn.");
 			}
 
-			if(SM.currentShip == SpawnManager.ShipType.Crusier)
+			else if(SM.currentShip == SpawnManager.ShipType.Crusier)
 			{
 				SM.Crusier_totalNumber = 2;
 				Destroy(gameObject);
@@ -75,7 +81,7 @@ public class ChaseMouse : MonoBehaviour
 				Debug.Log ("Placement canceled. You have 1 more " + gameObject.name + " to spawn.");
 			}
 
-			if(SM.currentShip == SpawnManager.ShipType.Battleship)
+			else if(SM.currentShip == SpawnManager.ShipType.Battleship)
 			{
 				SM.Battleship_totalNumber = 1;
 				Destroy(gameObject);
